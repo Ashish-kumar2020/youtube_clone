@@ -1,0 +1,33 @@
+{
+  "name": "youtube_clone",
+  "version": "1.0.0",
+  "description": "youtube clone application using react",
+  "main": "script.js",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ashish-kumar2020/youtube_clone.git"
+  },
+  "author": "Ashish Kumar Singh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ashish-kumar2020/youtube_clone/issues"
+  },
+  "homepage": "https://github.com/Ashish-kumar2020/youtube_clone#readme",
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.8.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.20.12",
+    "parcel": "^2.8.3",
+    "postcss": "^8.4.21",
+    "process": "^0.11.10",
+    "tailwindcss": "^3.2.4"
+  }
+}
