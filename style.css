@@ -1,3 +1,27 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+.search-bar{
+    margin: 10px;
+}
+
+.inputBox{
+    width: 480px;
+    border: 2px solid black;
+    border-radius: 28px;
+    height: 38px;
+    padding-left: 20px;
+    padding-bottom: 4px;
+    font-size: 18px;
+}
+
+.logo{
+    height: 75px;
+    margin-left: -15px;
+}
+
+.mic-icon{
+    margin-top: -10px;
+}
