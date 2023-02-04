@@ -1,30 +1,31 @@
-import Logo from "../assets/img/youtubeLogo.png";
+import Logo from '../assets/img/Logo.svg'
 import  '../../style.css'
 
 const Header = () => {
+
+    const Title = ()=>(
+        <>
+            <a href="/">
+                <img className="h-20 pl-32 py-4" alt="logo" src={Logo} />
+            </a>
+        </>
+    );
+
   return (
-
     <>
-    <div className="w-100% h-18 flex justify-between" >
-        <div className="img-container flex ">
-                <button><i className="fa-sharp fa-solid fa-bars px-6 fa-2x"></i></button>
-                <a href="#">
-                    <img className=" w-32 h-16 flex-wrap logo" alt="logo" src={Logo} />
-                </a>
+        <div className="main-header h-20  flex justify-between">
+            <Title/>    
+            
+            <div className="nav-items">
+                <ul className="flex py-6">
+                    <li className="pr-24 list-item"><i class="fa-sharp fa-solid fa-magnifying-glass dummy"></i>Search</li>
+                    <li className="pr-20 list-item"><i class="fa-solid fa-tag dummy"></i>Offers</li>
+                    <li className="pr-20 list-item"><i class="fa-solid fa-circle-info dummy"></i>Help</li>
+                    <li className="pr-20 list-item"><i class="fa-solid fa-user dummy"></i>Sign In</li>
+                    <li className="pr-20 list-item"><i class="fa-solid fa-cart-shopping dummy"></i>Cart</li>
+                </ul>
+            </div>
         </div>
-        <div className="search-bar flex py-2">
-            <input type="search" id="search" className="inputBox" placeholder="Search" required value="search"/>
-
-           <button className="mic-icon"><i className="fa-sharp fa-solid fa-microphone px-3 py-2 fa-2x"></i></button> 
-        </div>
-        <div className="nav-items">
-            <ul className="flex py-5">
-                <button><a href="#"><li className="px-3"><i class="fa-sharp fa-solid fa-video-slash fa-2x"></i></li></a></button>
-                <button><a href="#"><li className="px-3"><i class="fa-solid fa-bell fa-2x"></i></li></a></button>
-                <button><a href="#"><li className="px-3"><i class="fa-sharp fa-solid fa-circle-user fa-2x"></i></li></a></button>
-            </ul>
-        </div>
-    </div>
 
     </>
   );
