@@ -1,38 +1,35 @@
-import { useEffect, useState } from "react"
 import  '../../style.css'
-import RestaurantCard from "./RestaurantCard";
+import CarouselCard from './CarouselCard';
+import { useEffect , useState} from 'react';
 
 
-const Body = () => {
+const Carousel = ()=>{
 
-    const[restaurant,setRestaurant] = useState([]);
+    const [carouselData, setCarouselData] = useState([]);
 
     useEffect(()=>{
         getApiCall();
     },[]);   
 
-
     async function getApiCall() {
         const data = await fetch(" https://www.swiggy.com/dapi/restaurants/list/v5?lat=27.1774553&lng=78.0077653&page_type=DESKTOP_WEB_LISTING");
         const json = await data.json();
         console.log(json);
-        setRestaurant(json?.data?.cards[2]?.data?.data?.cards);
+        setCarouselData(json?.data?.cards[0]?.data?.data?.cards);
     }
    
-
-    return (
+    return(
         <>
-            <div className="main-body flex flex-wrap">
-               { restaurant.map((restaurantData) => {
+            <div className='carousel flex'>
+                {carouselData.map((cardData) => {
                     return (
-                        <RestaurantCard {...restaurantData.data}/>
+                        <CarouselCard key = {cardData.data.bannerId} {...cardData.data}/> 
                     )
                 })}
             </div>
         </>
     )
-        
-    
 }
 
-export default Body;
+export default Carousel;
+
