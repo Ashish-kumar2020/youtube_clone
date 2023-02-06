@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react"
 import  '../../style.css'
 import RestaurantCard from "./RestaurantCard";
-
+import {Link} from "react-router-dom"
+import Shimmer from "./Shimmer";
 
 const Body = () => {
 
@@ -20,12 +21,16 @@ const Body = () => {
     }
    
 
-    return (
+    return restaurant?.length === 0 ? (
+        <Shimmer />
+      ) : (
         <>
             <div className="main-body flex flex-wrap">
                { restaurant.map((restaurantData) => {
                     return (
-                        <RestaurantCard {...restaurantData.data}/>
+                        <Link to={"/restaurantDetail/"+ restaurantData.data.id} key={restaurantData.data.id}>
+                            <RestaurantCard {...restaurantData.data}/>
+                        </Link>
                     )
                 })}
             </div>

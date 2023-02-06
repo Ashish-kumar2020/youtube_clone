@@ -1,13 +1,14 @@
 import Logo from '../assets/img/Logo.svg'
 import  '../../style.css'
-
+import { Link } from "react-router-dom";
 const Header = () => {
 
     const Title = ()=>(
         <>
-            <a href="/">
+
+            <Link to="/">
                 <img className="h-20 pl-32 py-4" alt="logo" src={Logo} />
-            </a>
+            </Link>
         </>
     );
 
@@ -18,11 +19,11 @@ const Header = () => {
             
             <div className="nav-items">
                 <ul className="flex py-6">
-                    <li className="pr-24 list-item"><i className="fa-sharp fa-solid fa-magnifying-glass dummy"></i>Search</li>
-                    <li className="pr-20 list-item"><i className="fa-solid fa-tag dummy"></i>Offers</li>
-                    <li className="pr-20 list-item"><i className="fa-solid fa-circle-info dummy"></i>Help</li>
-                    <li className="pr-20 list-item"><i className="fa-solid fa-user dummy"></i>Sign In</li>
-                    <li className="pr-20 list-item"><i className="fa-solid fa-cart-shopping dummy"></i>Cart</li>
+                   <Link to="/search"> <li className="pr-16 list-item"><i className="fa-sharp fa-solid fa-magnifying-glass dummy"></i>Search</li>  </Link> 
+                  <Link to="/offer"><li className="pr-16 list-item"><i className="fa-solid fa-tag dummy"></i>Offers</li></Link> 
+                   <Link to="/help"><li className="pr-16 list-item"><i className="fa-solid fa-circle-info dummy"></i>Help</li></Link> 
+                   <Link to="/signin"><li className="pr-16 list-item"><i className="fa-solid fa-user dummy"></i>Sign In</li></Link> 
+                  <Link to="/cart"> <li className="pr-16 list-item"><i className="fa-solid fa-cart-shopping dummy"></i>Cart</li></Link> 
                 </ul>
             </div>
         </div>

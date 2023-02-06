@@ -138,3 +138,35 @@ hr{
     height: 2px;
     color: black;
 }
+
+
+/* Shimmer */
+
+.shimmer-main{
+    width: 298px;
+    height: 390px;
+    margin: 15px;
+    padding: 20px;
+    background: black;
+}
+
+.rest{
+    width: 298px;
+    height: 390px;
+    margin: 15px;
+    padding: 20px;
+    background: black;
+}
+
+.shimmer-card{
+    width: 298px;
+    height: 390px;
+    margin: 15px;
+    padding: 20px ;
+    background-color: grey;
+}
+
+.restaurant-list{
+    margin-top: 12px;
+    margin-left: 60px;
+}
