@@ -170,3 +170,120 @@ hr{
     margin-top: 12px;
     margin-left: 60px;
 }
+
+/* Restaurant Menu list */
+
+.restaurant-card-details{
+    width: 100%;
+    height: 250px;
+    background-color: rgb(24,26,40);
+}
+
+.restaurant-details{
+    width: 500px
+}
+.restaurant-menu-name{
+    color: #fff;
+    padding-top: 52px;
+    font-size: 22px;
+}
+
+.restaurant-img{
+    width: 474px;
+    height: 130px;
+    padding-left: 140px;
+    padding-top: 35px;
+    padding-right: 46px;
+}
+
+.restaurant-cuisins{
+    color: #8e9192;
+    padding-top: 12px;
+    font-size: 14px;
+}
+
+.totalRating{
+    padding-top: 8px;
+    color: #8e9192;
+    font-size: 12px;
+}
+
+.distances{
+    color: #fff;
+    padding-top: 12px;
+    font-size: 13px;
+    padding-left: 44px; 
+}
+.restaurant-rating{
+    color: white;
+    padding-top: 12px;
+    font-size: 14px;
+}
+.delivery-time{
+    color: #8e9192;
+    padding-top: 9px;
+    font-size: 13px;
+    padding-left: 44px;
+}
+
+.costs{
+    color: #fff;
+    padding-top: 13px;
+    font-size: 13px;
+    padding-left: 48px;
+}
+
+.costsTwoString{
+    color: #8e9192;
+    padding-top: 9px;
+    font-size: 13px;
+    padding-left: 44px;
+}
+
+.vl{
+    height: 40px;
+    border-left: 1px solid gray;
+    padding-bottom: 62px;
+}
+
+
+
+fieldset{
+    padding: 0;
+    border: 1px solid white;
+    width: 340px;
+    height: 150px;
+    margin: 59px;
+    position: relative;
+}
+.offers{
+    color: #fff;
+    /* padding: 45px; */
+    font-size: 15px;
+    position: absolute;
+    padding-left: 47px;
+    padding-top: 42px;
+}
+
+.offerType{
+    color: #fff;
+    padding-top: 73px;
+    padding-left: 46px;
+    font-size: 15px;
+    position: absolute;
+}
+
+.search-bar{
+    margin-top: 22px;
+}
+input{
+    border: 2px solid #000;
+    width: 260px;
+    height: 40px;
+}
+
+.pureVeg{
+    width: 200px;
+    background-color: black;
+    height: 200px;
+}
