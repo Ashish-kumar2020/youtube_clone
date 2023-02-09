@@ -2,10 +2,13 @@ import "../../style.css";
 import { useState,useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { IMG_CDN_URL } from "../constants";
+import useRestaurant from "../utils/useRestaurant";
 
 const RestaurantMenu = ()=>{
     const[restaurantMenu,setRestaurantMenu] = useState([]);
+  const [restaurantMenuItems, setRestaurauntMenuItems] = useState(null);
     const { resId } = useParams();
+    
 
     useEffect(()=>{
         getApiCall();
@@ -17,10 +20,16 @@ const RestaurantMenu = ()=>{
         const json = await data.json();
         console.log(json);
         setRestaurantMenu(json.data);
-        
-        return restaurantMenu;
+
+        setRestaurauntMenuItems(json.data);
+        // console.log(restaurantMenu)
+        return restaurantMenuItems;
     }
 
+    // Early return in case data does't gets loaded form api
+    if(!restaurantMenuItems){
+        return;
+    }
 
     return(
         <>
@@ -68,6 +77,19 @@ const RestaurantMenu = ()=>{
                 </div>
                
             </div>
+          <div className="flex flex-wrap menuItems">
+            <ul className=""> 
+            <h1 className="recommended">Recommended</h1>
+            {Object.values(restaurantMenuItems?.menu?.items).map((item) => (
+                <li key={item.id}>
+                {item.name} 
+                </li>
+            ))} 
+            </ul>
+            
+          </div>
+
+         
         </>
     )
 }

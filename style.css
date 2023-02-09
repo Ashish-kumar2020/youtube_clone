@@ -315,3 +315,43 @@ input{
     padding-top: 6px;
 }
 
+.menuItems{
+    margin-left: 20px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+.menuItems ul{
+    height: 460px;
+    text-align: right;
+    padding-right: 32px;
+    font-family: Montserrat;
+    font-size: 13px;
+}
+ul{
+    overflow:hidden; 
+    overflow-y:scroll;
+}
+ul li:hover{
+    color: orange;
+    cursor: pointer;
+}
+.recommended{
+    padding-bottom: 12px;
+}
+.recommended:hover{
+    color: orange;
+    cursor: pointer;
+}
+
+.menuItems ul li{
+    padding-bottom: 12px;
+}
+
+.notFound{
+    text-align: right;
+    height: 460px;
+    width: 380px;
+    padding: 42px;
+    /* border: 2px solid black; */
+    font-family: Montserrat;
+}
