@@ -180,7 +180,7 @@ hr{
 }
 
 .restaurant-details{
-    width: 500px
+    width: 420px;
 }
 .restaurant-menu-name{
     color: #fff;
@@ -212,7 +212,7 @@ hr{
     color: #fff;
     padding-top: 12px;
     font-size: 13px;
-    padding-left: 44px; 
+    padding-left: 4px; 
 }
 .restaurant-rating{
     color: white;
@@ -223,21 +223,21 @@ hr{
     color: #8e9192;
     padding-top: 9px;
     font-size: 13px;
-    padding-left: 44px;
+    padding-left: 4px;
 }
 
 .costs{
     color: #fff;
     padding-top: 13px;
     font-size: 13px;
-    padding-left: 48px;
+    padding-left: 4px;
 }
 
 .costsTwoString{
     color: #8e9192;
     padding-top: 9px;
     font-size: 13px;
-    padding-left: 44px;
+    padding-left: 4px;
 }
 
 .vl{
@@ -274,16 +274,44 @@ fieldset{
 }
 
 .search-bar{
-    margin-top: 22px;
+    margin-top: 14px;
 }
 input{
-    border: 2px solid #000;
-    width: 260px;
+    border: 2px solid white;
+    width: 203px;
     height: 40px;
+    padding-left: 22px;
+    font-size: 16px;
+    font-weight: bold;
+    color: black;
+    font-family: Montserrat;
 }
 
 .pureVeg{
-    width: 200px;
-    background-color: black;
-    height: 200px;
+    width: 42px;
+    height: 40px;
+    background-color: white;
+    margin-top: 14px;
+    border: 2px solid white;
+    margin-left: 14px;
 }
+
+.favourite{
+    width: 140px;
+    height: 40px;
+    background-color: white;
+    margin-top: 14px;
+    border: 2px solid white;
+    margin-left: 14px;
+    font-family: Montserrat;
+    padding-left: 12px;
+    color: black;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.veg-nonVeg{
+    padding-left: 11px;
+    padding-top: 6px;
+}
+

@@ -17,6 +17,7 @@ const RestaurantMenu = ()=>{
         const json = await data.json();
         console.log(json);
         setRestaurantMenu(json.data);
+        
         return restaurantMenu;
     }
 
@@ -47,12 +48,17 @@ const RestaurantMenu = ()=>{
                             <h2 className="costsTwoString">{restaurantMenu?.costForTwoMsg}</h2>
                         </div>
                      </div>
-                     <div className="search-bar">
-                            <input type="text" />
-                    </div>
-                    <div className="pureVeg">
-
-                    </div>
+                     <div className="flex">
+                        <div className="search-bar shadow-lg">
+                                <input type="text"placeholder="Search for dishes..."/>
+                        </div>
+                        <div className="pureVeg shadow-lg">
+                                <h2 className="veg-nonVeg">{restaurantMenu?.isVeg ? "🟢 " : "🔴"}</h2>
+                        </div>
+                        <div className="shadow-lg">
+                            <button className="favourite favourite-btn">Favourite</button>
+                        </div>
+                     </div>
                 </div>
                 <div className="restaurant-offer">
                     <fieldset><span className="offers">{restaurantMenu?.aggregatedDiscountInfo?.descriptionList[0]?.meta}</span>
