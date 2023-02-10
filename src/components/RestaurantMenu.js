@@ -2,11 +2,12 @@ import "../../style.css";
 import { useState,useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { IMG_CDN_URL } from "../constants";
-import useRestaurant from "../utils/useRestaurant";
+import MenuCard from "./MenuCard";
 
 const RestaurantMenu = ()=>{
     const[restaurantMenu,setRestaurantMenu] = useState([]);
-  const [restaurantMenuItems, setRestaurauntMenuItems] = useState(null);
+    const [restaurantMenuItems, setRestaurauntMenuItems] = useState(null);
+    const [detailMenuItem, setDetailMenuItem] = useState({});
     const { resId } = useParams();
     
 
@@ -22,6 +23,7 @@ const RestaurantMenu = ()=>{
         setRestaurantMenu(json.data);
 
         setRestaurauntMenuItems(json.data);
+        setDetailMenuItem(json.data)
         // console.log(restaurantMenu)
         return restaurantMenuItems;
     }
@@ -77,18 +79,24 @@ const RestaurantMenu = ()=>{
                 </div>
                
             </div>
-          <div className="flex flex-wrap menuItems">
-            <ul className=""> 
-            <h1 className="recommended">Recommended</h1>
-            {Object.values(restaurantMenuItems?.menu?.items).map((item) => (
-                <li key={item.id}>
-                {item.name} 
-                </li>
-            ))} 
+        <div className="flex flex-wrap ">
+        <div className="menuItems">
+            <ul className="menuItemsList"> 
+                <h1 className="recommended">Recommended</h1>
+                {Object.values(restaurantMenuItems?.menu?.items).map((item) => (
+                    <li className="foodList" key={item.id}>
+                    {item.name} 
+                    </li>
+                ))} 
             </ul>
             
           </div>
-
+            
+            <div className="detailed-menu-card ">
+                    <MenuCard menu = {detailMenuItem?.menu?.items}/>
+            </div>
+        </div>
+          
          
         </>
     )

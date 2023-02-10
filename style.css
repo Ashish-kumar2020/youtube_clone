@@ -320,21 +320,24 @@ input{
     margin-top: 12px;
     margin-bottom: 12px;
 }
-.menuItems ul{
+.menuItemsList{
     height: 460px;
     text-align: right;
     padding-right: 32px;
     font-family: Montserrat;
     font-size: 13px;
-}
-ul{
     overflow:hidden; 
     overflow-y:scroll;
 }
-ul li:hover{
+/* ul{
+    overflow:hidden; 
+    overflow-y:scroll;
+} */
+.foodList:hover{
     color: orange;
     cursor: pointer;
 }
+
 .recommended{
     padding-bottom: 12px;
 }
@@ -354,4 +357,92 @@ ul li:hover{
     padding: 42px;
     /* border: 2px solid black; */
     font-family: Montserrat;
+}
+
+/* Menu Card */
+
+.detailed-menu-card{
+    width: 536px;
+    height: 460px;
+    /* border: 2px solid black; */
+    margin-top: 32px;
+    margin-bottom: 12px;
+}
+.detail-list{
+    height: 460px;
+    padding-right: 32px;
+    font-family: Montserrat;
+    font-size: 13px;
+    overflow:hidden; 
+    overflow-y:scroll;
+}
+
+.fooddetails{
+    width: 300px;
+    margin-right: 28px;
+}
+
+.food-description{
+    color: gray;
+    font-size: 11px;
+}
+
+.foodItemList{
+    height: 190px;
+}
+
+.modal{
+    width: 550px;
+    height: 470px;
+    margin-left: -60px;
+    position: relative;
+    background-color: #8e9192;
+}
+
+.modalImg{
+    width: 310px;
+    height: 300px;
+    position: absolute;
+    top: 31px;
+    left: 140px;
+}
+
+.itemIsVeg{
+    position: absolute;
+    top: 352px;
+    left: 20px;
+}
+
+.itemName{
+    position: absolute;
+    top: 380px;
+    left: 20px;
+}
+
+.productPrice{
+    position: absolute;
+    top: 410px;
+    left: 20px;
+}
+
+
+
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+
+.modal-content {
+  width: 60%;
+  min-height: 200px;
+  background-color: white;
+  padding: 25px;
 }
