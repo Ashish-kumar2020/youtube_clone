@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 
 const MenuCard = (props) => {
@@ -8,34 +8,17 @@ const MenuCard = (props) => {
   const [itemName, setItemName] = useState("");
   const [itemIsVeg, setItemIsVeg] = useState(true);
   const [productPrice, setProductPrice] = useState("");
-  function Modal({ children, shown, close }) {
-    return shown ? (
-      <div
-        className="modal-backdrop"
-        onClick={() => {
-          // close modal when outside of modal is clicked
-          close();
-        }}
-      >
-        <div
-          className="modal-content"
-          onClick={e => {
-            // do not close modal if anything inside modal content is clicked
-            e.stopPropagation();
-          }}
-        >
-          <button onClick={close}>Close</button>
-          {children}
-        </div>
-      </div>
-    ) : null;
-  }
+ 
+const closeModal = ()=>{
+  setShowModal(false)
+}
+  
   return (
     <>
-    <div>
+   
         {showModal ? (
-                    <>
-                
+            <>
+              <div className="outer-modal cursor-pointer" onClick={()=>{closeModal()}}>
                 <div className="modal">  
                 <img className="modalImg"
                       src={
@@ -44,14 +27,16 @@ const MenuCard = (props) => {
                       }
                       alt={btnClickId + Image}
                     />
-                    <h2 className="pb-2 itemIsVeg">{itemIsVeg ? "🟢 " : "🔴"}</h2>
+                    <h2 className="pb-2 itemIsVeg">{itemIsVeg ? "🟢" : "🔴"}</h2>
                   <h2 className="pb-2 itemName">{itemName}</h2>
                   <h2 className="pb-5 productPrice">{"₹" + productPrice / 100}</h2>
                   
                 </div>
+
+              </div>
             </>
         ) : null}
-    </div>
+   
       <div className="menuItems">
         <ul className="detail-list">
           <div className="flex flex-wrap">
@@ -78,7 +63,7 @@ const MenuCard = (props) => {
                       
                     }}
                   >
-                    <Modal/>
+                    {/* <Modal/> */}
                     <img
                       src={
                         "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_150,h_150,c_fit/" +

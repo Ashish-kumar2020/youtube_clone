@@ -85,7 +85,7 @@ const RestaurantMenu = ()=>{
                 <h1 className="recommended">Recommended</h1>
                 {Object.values(restaurantMenuItems?.menu?.items).map((item) => (
                     <li className="foodList" key={item.id}>
-                    {item.name} 
+                    {(item.name).substring(0, 40)} 
                     </li>
                 ))} 
             </ul>
