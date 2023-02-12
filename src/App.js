@@ -9,13 +9,15 @@ import Cart from "./components/Cart";
 import SignIn from "./components/SignIn";
 import Help from "./components/Help";
 import RestaurantMenu from "./components/RestaurantMenu";
+import { Provider } from "react-redux";
+import store from "./utils/store";
 
 const AppLayout = () => {
   return (
-    <>
+    <Provider store = {store}>
         <Header/>
         <Outlet/>
-    </>
+    </Provider>
   )
 }
 

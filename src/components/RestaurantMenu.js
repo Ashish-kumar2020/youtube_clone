@@ -3,13 +3,19 @@ import { useState,useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { IMG_CDN_URL } from "../constants";
 import MenuCard from "./MenuCard";
+import { useDispatch } from "react-redux";
+import { addItem } from "../utils/cartSlice";
 
 const RestaurantMenu = ()=>{
     const[restaurantMenu,setRestaurantMenu] = useState([]);
     const [restaurantMenuItems, setRestaurauntMenuItems] = useState(null);
     const [detailMenuItem, setDetailMenuItem] = useState({});
     const { resId } = useParams();
-    
+    const dispatch = useDispatch();
+
+    const addFoodItem = (item) => {
+      dispatch(addItem(item));
+    };
 
     useEffect(()=>{
         getApiCall();
@@ -86,6 +92,12 @@ const RestaurantMenu = ()=>{
                 {Object.values(restaurantMenuItems?.menu?.items).map((item) => (
                     <li className="foodList" key={item.id}>
                     {(item.name).substring(0, 40)} 
+                    <button
+                className="p-1 bg-green-50"
+                onClick={() => addFoodItem(item)}
+              >
+                Add
+              </button>
                     </li>
                 ))} 
             </ul>
