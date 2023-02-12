@@ -457,3 +457,15 @@ input{
     position: absolute;
    left: 0px;
 }
+
+
+
+.cartItemsList{
+    border: 2px solid black;
+    width: 200px;
+    height: 200px;
+}
+
+.totalAmount{
+    border: 2px solid black;
+}

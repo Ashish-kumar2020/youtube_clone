@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-
+import "../../style.css"
 
 const MenuCard = (props) => {
   const [modalState, setModalState] = useState(false);
@@ -37,7 +37,7 @@ const closeModal = ()=>{
             </>
         ) : null}
    
-      <div className="menuItems">
+      <div className="menuItems flex">
         <ul className="detail-list">
           <div className="flex flex-wrap">
             {Object.values(props.menu).map((item) => (
@@ -79,8 +79,11 @@ const closeModal = ()=>{
            
           </div>
         </ul>
+
+       
       </div>
       {/* <Modal/> */}
+     
     </>
   );
 };

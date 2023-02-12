@@ -1,6 +1,7 @@
 import { clearCart } from "../utils/cartSlice";
 import { useDispatch, useSelector } from "react-redux";
 import FoodItem from "./FoodItem";
+import Checkout from "./Checkout";
 
 const Cart = ()=>{
     const cartItems = useSelector((store)=>store.cart.items);
@@ -8,6 +9,7 @@ const Cart = ()=>{
 
     const handleCkearCart = () => {
         dispatch(clearCart());
+       
     };
 
     return (
@@ -19,11 +21,26 @@ const Cart = ()=>{
         >
           Clear Cart
         </button>
-        <div className="flex">
+      
+            <Checkout/>
+            
+          
+        <div className="flex flex-wrap">
           {cartItems.map((item) => (
             <FoodItem key={item.id} {...item} />
+            
           ))}
+          
         </div>
+            
+        <div>
+            {cartItems.map((it)=>{
+              <Checkout {...it}/>
+            })}
+        </div>
+            
+
+     
       </div>
     )
 }

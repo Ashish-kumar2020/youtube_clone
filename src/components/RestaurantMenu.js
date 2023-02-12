@@ -4,9 +4,10 @@ import { useParams } from "react-router-dom";
 import { IMG_CDN_URL } from "../constants";
 import MenuCard from "./MenuCard";
 import { useDispatch } from "react-redux";
-import { addItem } from "../utils/cartSlice";
+import { addItem , price} from "../utils/cartSlice";
 
 const RestaurantMenu = ()=>{
+   
     const[restaurantMenu,setRestaurantMenu] = useState([]);
     const [restaurantMenuItems, setRestaurauntMenuItems] = useState(null);
     const [detailMenuItem, setDetailMenuItem] = useState({});
@@ -15,6 +16,7 @@ const RestaurantMenu = ()=>{
 
     const addFoodItem = (item) => {
       dispatch(addItem(item));
+      dispatch(price(item.price));
     };
 
     useEffect(()=>{
