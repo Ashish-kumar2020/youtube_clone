@@ -469,3 +469,7 @@ input{
 .totalAmount{
     border: 2px solid black;
 }
+
+.search-btn{
+    border: 2px solid black;
+}

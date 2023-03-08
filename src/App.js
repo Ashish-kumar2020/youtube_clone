@@ -28,7 +28,9 @@ const appRouter = createBrowserRouter([
     children: [
       {
         path: "/search",
-        element : <Search/>
+        element : 
+        <Search/>
+        
       },
       {
         path: "/",
