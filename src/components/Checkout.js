@@ -17,10 +17,6 @@ const Checkout = () => {
   return (
     <div>
        <CheckoutPrice prices = {cartItems}/>
-       
-        
-   
-
     </div>
 
   )

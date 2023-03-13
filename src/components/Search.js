@@ -3,7 +3,6 @@ import { filterData } from "../utils/helper";
 import  '../../style.css'
 import { Link } from "react-router-dom";
 import RestaurantCard from "./RestaurantCard";
-import { faHourglass1 } from "@fortawesome/free-solid-svg-icons";
 
 
 const Search = ()=>{

@@ -7,9 +7,10 @@ import Shimmer from "./Shimmer";
 const Body = () => {
 
     const[restaurant,setRestaurant] = useState([]);
-
+    console.log(useState())
     useEffect(()=>{
         getApiCall();
+        console.log("useEffect() called")
     },[]);   
 
 
@@ -18,7 +19,7 @@ const Body = () => {
         const json = await data.json();
         console.log(json);
         setRestaurant(json?.data?.cards[2]?.data?.data?.cards);
-
+        console.log("useEffect() called inside getApiFunc")
         return restaurant;
     }
    

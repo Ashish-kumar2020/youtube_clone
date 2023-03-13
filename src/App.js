@@ -11,6 +11,7 @@ import Help from "./components/Help";
 import RestaurantMenu from "./components/RestaurantMenu";
 import { Provider } from "react-redux";
 import store from "./utils/store";
+import Error from "./components/Error";
 
 const AppLayout = () => {
   return (
@@ -25,12 +26,11 @@ const appRouter = createBrowserRouter([
   {
     path: '/',
     element: <AppLayout/>,
+    errorElement: <Error/>,
     children: [
       {
         path: "/search",
-        element : 
-        <Search/>
-        
+        element : <Search/>   
       },
       {
         path: "/",
